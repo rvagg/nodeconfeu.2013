@@ -179,3 +179,22 @@ And sometimes...
     </td>
   </tr>
 </table>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## LevelUP
+
+Backed by a key/value store for arbitrary data, lexicographically sorted by key
+
+ * Core operations: `put()`, `get()`, `del()`
+ * Batch writes
+ * ReadStream *the secret sauce*
+ * WriteStream *for convenience*
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## ReadStream
+
+The core query mechanism to access sorted data
+
+Arbitrary *start* and *end*
