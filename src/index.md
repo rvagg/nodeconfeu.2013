@@ -1,60 +1,168 @@
 
-# NodeConf.eu Themed Slides
+# A Real Database Rethink
 
-<p style="margin: 100px auto 0 auto; text-align: center; font-size: 10px;">
-*(use -&gt; and &lt;- to navigate)*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Let's talk about web servers
+
+***The first age***: CERN httpd and its children&mdash;the monoliths
+
+***The second age***: A common tongue: CGI
+
+***The third age***: Breaking out of CGI&mdash;PHP and other gateways
+
+***The fourth age***:
+
+  * Monoliths
+  * Special-purpose servers
+  * **httpd in our applications**
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<h2 data-bespoke-bullet>Databases: a short history</h2>
+
+<p data-bespoke-bullet>
+***1960s***: From tapes and batch to disks, shared access and interactivity
+</p>
+
+<p data-bespoke-bullet>
+***Late 1960s***: Navigational databases: *links*
+</p>
+
+<p data-bespoke-bullet>
+***Early 1970s***: The relational model: *content*
+</p>
+
+<p data-bespoke-bullet>
+***Late 1970s***: SQL
+</p>
+
+<p data-bespoke-bullet>
+***Early 1980s***: A database on my desktop (dBASE and its ilk)
+</p>
+
+<p data-bespoke-bullet>
+***Late 1980s***: Object Orient ALL THE THINGS!
+</p>
+
+<p data-bespoke-bullet>
+***2000s***: Speed and scale: NoSQL
+<br><span data-bespoke-bullet>
+*"NewSQL": never let a beautiful abstraction go to waste*
+</span>
 </p>
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Browser stuff
+## So what is a Database?
 
-Designed for Chrome, works well enough across other browsers for sharing afterwards.
+**A tool for interacting with structured data, externalised from the core of our application**
 
-Zoom in till it fits (Ctrl +, or whatever your OS variant is)
+ * Persistence
+ * Performance
+ * Simplify access to complex data
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+And sometimes...
 
-## Heading 2
-
-### Heading 3
-### &nbsp;&nbsp;&nbsp;&nbsp;&hellip; more 3rd-level heading
-### &nbsp;&nbsp;&nbsp;&nbsp;&hellip; and a little more
-### &nbsp;&nbsp;&nbsp;&nbsp;&hellip; just one more!
-
-And a bit of paragraph here
+ * Shared access
+ * Scalability
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Authored in Markdown
+## The tyranny of a beautiful abstraction
 
-Single *index.md* file (like [this one](https://raw.github.com/rvagg/campjs-2013-learn-you-node/master/src/index.md)), with a *build.js* (like [this one](https://raw.github.com/rvagg/campjs-2013-learn-you-node/master/src/build.js)) script that converts to the slides, including formatting and even syntax highlighting.
+An abstraction that fits many problems very well is tempting to use in solving more problems
 
- * *build.js* also has a `--watch`
+e.g. relational databases, relational algebra and SQL
 
-```js
-var foo = require('bar')
-
-if (foo['woohoo'] === false)
-  throw new Error('Whoa!')
-```
-
-And GitHub-style `inline = code`.
+The problem should rule the solution, not the reverse.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Break out of Markdown
-
-Inline HTML supported so you can control styling:
-
-<table cellpadding=0 cellspacing=0 style="border-collapse: collapse; margin: 20px auto;">
-  <tr>
-    <td style="border-bottom: dashed 2px rgb(134,136,118); padding: 2em; text-align: center;">Eh?</td>
-    <td style="border: solid 2px rgb(134,136,118); background-color: rgb(245,245,244); padding: 2em; text-align: center;" colspan=4>Ooooo, a white box!</td>
-    <td style="border-bottom: dashed 2px rgb(134,136,118); padding: 0.5em;">&nbsp;</td>
+<table class="ecosystem">
+  <tr class="tools">
+    <td class="section"><span>Tools</span></td>
+    <td><table><tr>
+      <td>lev</td>
+      <td>levelweb</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr></table></td>
   </tr>
-  <tr>
-    <td style="padding: 2em; text-align: center;" rowspan=2>What is this?</td>
-    <td style="border: solid 2px rgb(134,136,118); padding: 2em; text-align: center;" colspan=4>I don't know, but it's awesome!</td>
+  <tr class="packages">
+    <td class="section"><span>Packages</span></td>
+    <td><table><tr>
+      <td>tacodb</td>
+      <td>couchup</td>
+      <td>LevelGraph</td>
+      <td>firedup</td>
+      <td>level-assoc</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr><tr>
+      <td>level-static</td>
+      <td>level-store</td>
+      <td>level-session</td>
+      <td>level-fs</td>
+      <td>LevelTTLCache</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr></table></td>
+  </tr>
+  <tr class="extensions">
+    <td class="section"><span>Extensions</span></td>
+    <td><table><tr>
+      <td>level-live-stream</td>
+      <td>map-reduce</td>
+      <td>level-queryengine</td>
+      <td>Level-Multiply</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr><tr>
+      <td>multilevel</td>
+      <td>level-replicate</td>
+      <td>level-master</td>
+      <td>Level TTL</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr></table></td>
+  </tr>
+  <tr class="pluggability">
+    <td class="section"><span>Pluggability</span></td>
+    <td><table><tr>
+      <td>sublevel</td>
+      <td>level-hooks</td>
+      <td>level-mutex</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr></table></td>
+  </tr>
+  <tr class="core">
+    <td class="section"><span>Core</span></td>
+    <td colspan="10">
+      <table><tr><td>
+        LevelUP
+      </td></tr></table>
+    </td>
+  </tr>
+  <tr class="storage">
+    <td class="section"><span>Storage</span></td>
+    <td colspan="10"><table><tr>
+      <td class="rotate"><span><b>LevelDOWN</b></span></td>
+      <td class="rotate"><span>LevelDOWN (Hyper)</span></td>
+      <td class="rotate"><span>LevelDOWN (Basho)</span></td>
+      <td class="rotate"><span>MemDOWN</span></td>
+      <td class="rotate"><span>level.js</span></td>
+      <td class="rotate"><span>leveldown-gap</span></td>
+      <td class="rotate"><span>LMDB</span></td>
+      <td class="rotate"><span>mysqlDOWN</span></td>
+    </tr></table>
+    </td>
   </tr>
 </table>
