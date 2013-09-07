@@ -184,17 +184,53 @@ And sometimes...
 
 ## LevelUP
 
-Backed by a key/value store for arbitrary data, lexicographically sorted by key
+Backed by a key/value store for arbitrary data, sorted by key
 
  * Core operations: `put()`, `get()`, `del()`
- * Batch writes
- * ReadStream *the secret sauce*
- * WriteStream *for convenience*
+ * Atomic batch writes
+ * ReadStream: *the secret sauce*
+ * WriteStream: *for convenience*
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## ReadStream
 
+An essential primitive for building complex features
+
 The core query mechanism to access sorted data
 
 Arbitrary *start* and *end*
+
+```js
+db.createReadStream({ start: 'Water', end: 'Water\xff' })
+  .on('data', function (entry) {
+    console.log(entry.key)
+  })
+
+// → Waterford
+// → Watergrasshill
+// → Waterville
+```
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Key structure
+
+Key-based sorting and querying requires good key *design*
+
+Keys as hierarchical descriptors of content:
+
+```js
+'countries~Ireland'
+'countries~Israel'
+...
+'towns~Ireland~Waterford'
+'towns~Ireland~Watergrasshill'
+...
+'streets~Ireland~Waterford~Dunmore Road'
+'streets~Ireland~Waterford~Derrynane Close'
+...
+```
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

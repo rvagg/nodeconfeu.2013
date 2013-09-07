@@ -211,21 +211,54 @@
       
         <section>
           <h2>LevelUP</h2>
-<p>Backed by a key/value store for arbitrary data, lexicographically sorted by key</p>
+<p>Backed by a key/value store for arbitrary data, sorted by key</p>
 <ul>
 <li>Core operations: <code>put()</code>, <code>get()</code>, <code>del()</code></li>
-<li>Batch writes</li>
-<li>ReadStream <em>the secret sauce</em></li>
-<li>WriteStream <em>for convenience</em></li>
+<li>Atomic batch writes</li>
+<li>ReadStream: <em>the secret sauce</em></li>
+<li>WriteStream: <em>for convenience</em></li>
 </ul>
 
         </section>
       
         <section>
           <h2>ReadStream</h2>
+<p>An essential primitive for building complex features</p>
 <p>The core query mechanism to access sorted data</p>
 <p>Arbitrary <em>start</em> and <em>end</em></p>
+<div class="highlight"><pre><span class="nx">db</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">({</span> <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;Water&#39;</span><span class="p">,</span> <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;Water\xff&#39;</span> <span class="p">})</span>
+  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">key</span><span class="p">)</span>
+  <span class="p">})</span>
 
+<span class="c1">// → Waterford</span>
+<span class="c1">// → Watergrasshill</span>
+<span class="c1">// → Waterville</span>
+</pre></div>
+
+
+        </section>
+      
+        <section>
+          <h2>Key structure</h2>
+<p>Key-based sorting and querying requires good key <em>design</em></p>
+<p>Keys as hierarchical descriptors of content:</p>
+<div class="highlight"><pre><span class="s1">&#39;countries~Ireland&#39;</span>
+<span class="s1">&#39;countries~Israel&#39;</span>
+<span class="p">...</span>
+<span class="s1">&#39;towns~Ireland~Waterford&#39;</span>
+<span class="s1">&#39;towns~Ireland~Watergrasshill&#39;</span>
+<span class="p">...</span>
+<span class="s1">&#39;streets~Ireland~Waterford~Dunmore Road&#39;</span>
+<span class="s1">&#39;streets~Ireland~Waterford~Derrynane Close&#39;</span>
+<span class="p">...</span>
+</pre></div>
+
+
+        </section>
+      
+        <section>
+          
         </section>
       
 
