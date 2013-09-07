@@ -63,6 +63,35 @@ And sometimes...
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## The Node approach
+
+<div data-bespoke-bullet>
+
+<ul>
+ <li>Small core, vibrant user-land</li>
+ <li>Extreme modularity</li>
+ <li>Reimplement everything in JavaScript!</li>
+</ul>
+
+</div>
+<div data-bespoke-bullet>
+
+<p>Applied to databases?</p>
+
+<ul>
+ <li>Small core: LevelUP</li>
+ <li>Everything as a module</li>
+ <li>Pulling in many aspects of database *practice* &amp; *theory*</li>
+</ul>
+
+<p>
+(internal data relationships, data relationship with the application, storage technology, distributed methodologies)
+</p>
+
+</div>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 <table class="ecosystem">
   <tr class="tools">
     <td class="section"><span>Tools</span></td>
