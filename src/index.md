@@ -3,22 +3,6 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Let's talk about web servers
-
-***The first age***: CERN httpd and its children&mdash;the monoliths
-
-***The second age***: A common tongue: CGI
-
-***The third age***: Breaking out of CGI&mdash;PHP and other gateways
-
-***The fourth age***:
-
-  * Monoliths
-  * Special-purpose servers
-  * **httpd in our applications**
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 <h2 data-bespoke-bullet>Databases: a short history</h2>
 
 <p data-bespoke-bullet>
