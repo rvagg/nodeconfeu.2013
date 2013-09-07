@@ -38,6 +38,16 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## The tyranny of a beautiful abstraction
+
+An abstraction that fits many problems very well is tempting to use in solving more problems
+
+e.g. relational databases, relational algebra and SQL
+
+The problem should rule the solution, not the reverse.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ## So what is a Database?
 
 **A tool for interacting with structured data, externalised from the core of our application**
@@ -50,16 +60,6 @@ And sometimes...
 
  * Shared access
  * Scalability
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-## The tyranny of a beautiful abstraction
-
-An abstraction that fits many problems very well is tempting to use in solving more problems
-
-e.g. relational databases, relational algebra and SQL
-
-The problem should rule the solution, not the reverse.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

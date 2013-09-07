@@ -338,7 +338,7 @@ table {
 }
 .ecosystem .extensions > td:first-child {
   background-color: rgba(232, 142, 12, 0.1);
-  color: rgb(158, 96, 8);
+  color: rgb(108, 76, 8);
   border: solid 1px transparent;
 }
 .ecosystem .extensions table td {
@@ -374,7 +374,7 @@ table {
 }
 .ecosystem .storage > td:first-child {
   background-color: rgba(255, 244, 13, 0.1);
-  color: rgb(148, 148, 6);
+  color: rgb(80, 80, 6);
 }
 .ecosystem .storage table td {
   border-color: rgb(255, 255, 13);
