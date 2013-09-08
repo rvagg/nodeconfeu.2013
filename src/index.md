@@ -155,7 +155,7 @@ And sometimes...
     </tr></table></td>
   </tr>
   <tr class="pluggability">
-    <td class="section"><span>Pluggability</span></td>
+    <td class="section"><span>Extensibility</span></td>
     <td><table><tr>
       <td>sublevel</td>
       <td>level-hooks</td>

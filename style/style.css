@@ -399,7 +399,7 @@ table {
   padding: 13px;
 }
 .ecosystem > tbody > tr.core > td:first-child span {
-  padding: 10px;
+  padding: 13px;
 }
 .ecosystem .storage > td:first-child {
   background-color: rgba(255, 244, 13, 0.1);
