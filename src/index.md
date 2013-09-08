@@ -256,3 +256,10 @@ Keys as hierarchical descriptors of content:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## Building-blocks
+
+**From:** a 1-dimensional storage array
+
+**To:** a multi-dimensional data tool for customised solutions
+
+The Level\* ecosystem: A menu of *beautiful*, but *small* abstractions
