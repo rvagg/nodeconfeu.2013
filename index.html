@@ -23,6 +23,13 @@
       
         <section>
           <h1>A Real Database Rethink</h1>
+<p style="margin-top: 120px; text-align: center; font-size: 21px; font-style: italic;"><i>@rvagg</i></p>
+
+
+        </section>
+      
+        <section>
+          <h1>&quot;NodeBase&quot;<br><i>(or)</i> &quot;Level*&quot;</h1>
 
         </section>
       
@@ -31,6 +38,11 @@
 
 <p data-bespoke-bullet>
 <strong><em>1960s</em></strong>: From tapes and batch to disks, shared access and interactivity
+</p>
+
+<p class="tape-loading-img">
+  <img src="img/fig127b.jpg">
+  <span>...not a &quot;database&quot;</span>
 </p>
 
 <p data-bespoke-bullet>
@@ -65,9 +77,8 @@
       
         <section>
           <h2>The tyranny of a beautiful abstraction</h2>
-<p>An abstraction that fits many problems very well is tempting to use in solving more problems</p>
-<p>e.g. relational databases, relational algebra and SQL</p>
-<p>The problem should rule the solution, not the reverse.</p>
+<p>An abstraction that fits many problems very well will be made to fit all related problems</p>
+<p>Programmers take <em>Maslow&#39;s hammer</em> to the next level</p>
 
         </section>
       
@@ -210,8 +221,22 @@
         </section>
       
         <section>
+          <h2>LevelDB</h2>
+<ul>
+<li>Open-source, embedded key/value store by Google</li>
+<li>Sorted by keys</li>
+<li>Values are compressed with Snappy</li>
+<li>Basic operations: <code>Get()</code>, <code>Put()</code>, <code>Del()</code></li>
+<li>Atomic <code>Batch()</code></li>
+<li>Bi-directional iterators</li>
+</ul>
+
+        </section>
+      
+        <section>
           <h2>LevelUP</h2>
-<p>Backed by a key/value store for arbitrary data, sorted by key</p>
+<p>Inspired by LevelDB, but not necessarily dependent upon it</p>
+<p><i>Backed</i> by a key/value store for arbitrary data, sorted by key</p>
 <ul>
 <li>Core operations: <code>put()</code>, <code>get()</code>, <code>del()</code></li>
 <li>Atomic batch writes</li>

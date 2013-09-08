@@ -1,12 +1,23 @@
 
 # A Real Database Rethink
 
+<p style="margin-top: 120px; text-align: center; font-size: 21px; font-style: italic;"><i>@rvagg</i></p>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# "NodeBase"<br><i>(or)</i> "Level*"
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <h2 data-bespoke-bullet>Databases: a short history</h2>
 
 <p data-bespoke-bullet>
 ***1960s***: From tapes and batch to disks, shared access and interactivity
+</p>
+
+<p class="tape-loading-img">
+  <img src="img/fig127b.jpg">
+  <span>...not a "database"</span>
 </p>
 
 <p data-bespoke-bullet>
@@ -40,11 +51,9 @@
 
 ## The tyranny of a beautiful abstraction
 
-An abstraction that fits many problems very well is tempting to use in solving more problems
+An abstraction that fits many problems very well will be made to fit all related problems
 
-e.g. relational databases, relational algebra and SQL
-
-The problem should rule the solution, not the reverse.
+Programmers take *Maslow's hammer* to the next level
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -182,9 +191,22 @@ And sometimes...
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## LevelDB
+
+ * Open-source, embedded key/value store by Google
+ * Sorted by keys
+ * Values are compressed with Snappy
+ * Basic operations: `Get()`, `Put()`, `Del()`
+ * Atomic `Batch()`
+ * Bi-directional iterators
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ## LevelUP
 
-Backed by a key/value store for arbitrary data, sorted by key
+Inspired by LevelDB, but not necessarily dependent upon it
+
+<i>Backed</i> by a key/value store for arbitrary data, sorted by key
 
  * Core operations: `put()`, `get()`, `del()`
  * Atomic batch writes

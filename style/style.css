@@ -247,6 +247,31 @@ body, section.bespoke-slide {
   margin-bottom: 0.5em;
 }
 
+.tape-loading-img {
+  text-align: center;
+}
+
+.tape-loading-img img {
+  width: 400px;
+  margin: auto;
+  border: solid white 2px;
+  border-radius: 5px;
+}
+
+.tape-loading-img span {
+  position: absolute;
+  bottom: 50px;
+  left: 64px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-style: italic;
+}
+
+.bespoke-bullet-active + .tape-loading-img {
+  display: none;
+  position: absolute;
+}
+
 .bespoke-bullet-inactive {
   display: none;
 }
